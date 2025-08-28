@@ -1,0 +1,17 @@
+{
+    "name": "syste/pd-shortcodes",
+    "autoload": {
+        "psr-4": {
+            "PdShortcodes\\": "App/"
+        }
+    },
+    "require": {
+        "yahnis-elsts/plugin-update-checker": "^5.0"
+    },
+    "authors": [
+        {
+            "name": "maxkonar",
+            "email": "k.karasiewicz@premiumdigital.pl"
+        }
+    ]
+}
