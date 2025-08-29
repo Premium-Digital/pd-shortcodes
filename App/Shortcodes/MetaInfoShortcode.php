@@ -21,9 +21,10 @@ class MetaInfoShortcode implements ShortcodeInterface
             return '';
         }
 
-        $postId       = get_the_ID();
+        $postId = get_the_ID();
+        $createdDate = get_the_date('', $postId);
         $modifiedDate = get_the_modified_date('', $postId);
-        $readingTime  = $this->getReadingTime($postId);
+        $readingTime = $this->getReadingTime($postId);
         $template = PD_SHORTCODES_PLUGIN_DIR_PATH . 'templates/shortcodes/meta-info.php';
 
         if (!file_exists($template)) {
