@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Premium-Digital/pd-shortcodes#readme",
   "devDependencies": {
     "sass": "^1.91.0",
+    "terser": "^5.43.1",
     "vite": "^7.1.3"
   }
 }
