@@ -10,6 +10,11 @@ class MetaInfoShortcode implements ShortcodeInterface
         return 'pd_meta_info';
     }
 
+        public function getDescription(): string
+    {
+        return  esc_html__('Displays the last modified date and estimated reading time for a post.', 'pd-shortcodes');
+    }
+
     public function render(array $atts = [], ?string $content = null): string
     {
         if (!is_single()) {

@@ -12,4 +12,9 @@ interface ShortcodeInterface
      * Renders the shortcode output.
      */
     public function render(array $atts = [], ?string $content = null): string;
+    
+    /**
+     * Returns a brief description of the shortcode.
+     */
+    public function getDescription(): string;
 }

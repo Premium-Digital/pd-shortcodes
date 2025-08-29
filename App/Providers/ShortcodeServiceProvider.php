@@ -38,4 +38,14 @@ class ShortcodeServiceProvider
     {
         self::addShortcode(new MetaInfoShortcode());
     }
+
+    /**
+     * Get all registered shortcodes
+     *
+     * @return ShortcodeInterface[]
+     */
+    public static function all(): array
+    {
+        return self::$shortcodes;
+    }
 }

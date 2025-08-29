@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       PD Shortcodes
  * Description:       Collection of custom shortcodes.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            kkarasiewicz
  * Text Domain:       pd-shortcodes
  * Domain Path:       /languages

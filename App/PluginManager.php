@@ -4,6 +4,7 @@ namespace PdShortcodes;
 
 use PdShortcodes\Updater;
 use PdShortcodes\Providers\ShortcodeServiceProvider;
+use PdShortcodes\ShortcodeDocsPage;
 
 class PluginManager
 {
@@ -11,6 +12,7 @@ class PluginManager
     {
         Updater::init();
         ShortcodeServiceProvider::init();
+        ShortcodeDocsPage::init();
     }
 
     public static function activate()
