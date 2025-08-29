@@ -13,8 +13,8 @@ class ShortcodeDocsPage
     public static function registerMenu(): void
     {
         add_menu_page(
-            __('Shortcodes', 'pd-shortcodes'),
-            __('Shortcodes', 'pd-shortcodes'),
+            __('PD Shortcodes', 'pd-shortcodes'),
+            __('PD Shortcodes', 'pd-shortcodes'),
             'manage_options',
             'pd-shortcodes-docs',
             [self::class, 'renderPage'],
@@ -26,26 +26,10 @@ class ShortcodeDocsPage
     public static function renderPage(): void
     {
         $shortcodes = ShortcodeServiceProvider::all();
-        ?>
-        <div class="wrap">
-            <h1><?php _e('Available Shortcodes', 'pd-shortcodes'); ?></h1>
-            <table class="widefat striped">
-                <thead>
-                    <tr>
-                        <th><?php _e('Tag', 'pd-shortcodes'); ?></th>
-                        <th><?php _e('Description', 'pd-shortcodes'); ?></th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php foreach ($shortcodes as $shortcode): ?>
-                    <tr>
-                        <td><code>[<?php echo esc_html($shortcode->getTag()); ?>]</code></td>
-                        <td><?php echo esc_html($shortcode->getDescription()); ?></td>
-                    </tr>
-                <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
-        <?php
+        $templateFile = PD_SHORTCODES_PLUGIN_DIR_PATH . 'templates/admin/admin-shortcodes-page.php';
+
+        if (file_exists($templateFile)) {
+            include $templateFile;
+        }
     }
 }

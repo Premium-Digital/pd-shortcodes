@@ -19,7 +19,7 @@ class ShortcodeServiceProvider
         self::registerDefaults();
 
         foreach (self::$shortcodes as $shortcode) {
-            add_shortcode($shortcode->getTag(), [$shortcode, 'render']);
+            add_shortcode($shortcode->getName(), [$shortcode, 'render']);
         }
     }
 

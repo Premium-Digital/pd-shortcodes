@@ -5,7 +5,7 @@ use PdShortcodes\Contracts\ShortcodeInterface;
 
 class MetaInfoShortcode implements ShortcodeInterface
 {
-    public function getTag(): string
+    public function getName(): string
     {
         return 'pd_meta_info';
     }
